@@ -57,5 +57,5 @@ def get_average_age_for_season(data, season)
   end
   binding.pry
   ages.each{|age| average_age += age}
-  average_age = (average_age.float(2) / ages.length).round
+  average_age = (average_age / ages.length).round
 end
