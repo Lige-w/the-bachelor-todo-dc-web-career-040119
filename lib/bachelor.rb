@@ -1,7 +1,9 @@
+require 'pry'
 def get_first_name_of_season_winner(data, season)
   # code here
   winner = ""
   data[season].each do |contestant, stats|
+    binding.pry
     if stats["status"] == "Winner"
       winner = contestant.split.shift
     end
