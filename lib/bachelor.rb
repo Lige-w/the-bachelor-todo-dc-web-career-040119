@@ -4,8 +4,8 @@ def get_first_name_of_season_winner(data, season)
   winner = ""
   data[season].each do |contestant, stats|
     binding.pry
-    if stats["status"] == "Winner"
-      winner = contestant.split.shift
+    if contestant["status"] == "Winner"
+      winner = contestant["name"].split.shift
     end
   end
   winner
